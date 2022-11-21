@@ -7,7 +7,6 @@ const Home=()=>{
     const [weatherdata, setWeatherData] = useState(null);
     const [city, setCity] = useState('تهران');
     const [loading, setLoading] = useState(false);
-  
     const getData = async () => {
       try{
           setLoading(true);
@@ -28,11 +27,10 @@ const Home=()=>{
     useEffect(() => {
       getData();
     }, []);
-  
     return(
-        <div className="App">
+        <div>
+      
           <div className="card">
-    
             <div style={{width:'50%',margin:'auto'}}> <img src={img} width={'100%'}/></div>
             <div className="search-form">
               <input type="text" value={city} onChange={(e) => setCity(e.target.value)} placeholder="شهر را وارد کنید" />
